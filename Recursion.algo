@@ -1,0 +1,33 @@
+
+
+  ALGORITHM palindrome_checker
+  VAR
+    word: STRING = "kayak"
+    reversedWord: STRING
+  BEGIN
+    reversedWord = reverse_string(word)
+    // check if work contains a single character or an empty space
+    IF ((word.lenght < 2 OR word[0] = " ")) THEN
+      Write(word + "  is a palindrome")
+    END_IF
+
+    //compare the ending character in each word against another
+    IF (word[word.length - 1] = reversedWord.lenght -1) THEN
+    //compare the reversed string against each other to check if the word is a palindrome
+      IF (word = reversedWord) THEN
+        write(word + " is a palindrome")
+      ELSE
+        write(word + " is not a palindrome")
+      END_IF
+    END_IF
+  END
+
+  FUNCTION reverse_string (word) : STRING
+  VAR
+    teststring: STRING = ' '
+  BEGIN
+    FOR i FROM n-1 TO 0 STEP --1  DO
+      textString = textString + word[i]
+    END_FOR
+    RETURN teststring ;
+  END
